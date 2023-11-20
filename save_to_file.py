@@ -1,7 +1,7 @@
 
 
 def add_note_to_file(note):
-    with ('notes.csv', 'w') as file:
-        # for i in note:
-        file.write(';')
-        # file.write('\n')
+    with open('notes.csv', 'a') as data:
+        for i in note:
+            data.write(str(i) + ';')
+        data.write('\n')
