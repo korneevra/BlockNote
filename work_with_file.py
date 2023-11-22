@@ -17,9 +17,20 @@ def read_list_from_file(date):
 
 def delete_note_from_file(id):
     with open('notes.csv', 'r') as data:
-        list = str(data).split()
+        list = [x for x in data]
+    n = 0
     for i in list:
-        print(str(i).split(';')[0])
+        temp = str(i).split(';')
+        if temp[0] == id:
+            list.pop(n)
+            break
+        else:
+            n += 1
+    with open('notes.csv', 'w') as data:
+        for i in list:
+            data.write(str(i))
+    return True
+
 
 
 
