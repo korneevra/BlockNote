@@ -9,6 +9,8 @@ def add_note_to_file(note):
 def read_list_from_file(date):
     with open('notes.csv', 'r') as data:
         list = [x for x in data]
+        if date == 'all':
+            return list
         sort = []
         for i in list:
             if date in i:

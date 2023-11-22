@@ -16,7 +16,7 @@ def input_body():
     return input("Input note:_")
 
 def input_date():
-    return input("Input date (YYYY-MM-DD):_")
+    return input("Input date (YYYY-MM-DD) or <Enter> for All:_")
 
 def print_note(note):
     print('--------------------------')
